@@ -65,7 +65,7 @@ execute_after_dh_auto_install:
 	   $(D)/usr/share/lintian/profiles/dpkg/main.profile
 
 override_dh_auto_test:
-	dh_auto_test -- $(testflags)
+	echo "!由于在OBS环境内构建,故跳过测试"
 
 override_dh_installsystemd:
 	dh_installsystemd -a --name=dpkg-db-backup \
